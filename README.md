@@ -27,7 +27,7 @@ ans - Its very easy to use and powerful enough to make your games with.
            window.Clear(Mathf::Vector4f(255, 255, 255, 255));
            window.Display();
       }
-      Octo::DestroyWindow(window);
+      window.DestroyWindow();
     }
     ```
  * Adding an Object
@@ -47,7 +47,7 @@ ans - Its very easy to use and powerful enough to make your games with.
              simpleObject.draw();
              window.Display();
           }
-          Octo::DestroyWindow(window);
+          window.DestroyWindow();
       }
    ```
 * Properties in Object
