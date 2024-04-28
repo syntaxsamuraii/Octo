@@ -39,12 +39,11 @@ ans - Its very easy to use and powerful enough to make your games with.
        {
           window.CreateWindow("My first window", 500, 600);
           simpleObject.type = Octo::SPRITE;
-          simpleObject.loadfrompath("Player.png");
-          //simpleObject.init(); this is not needed here as its a sprite and loadfrompath() does that for you
+          simpleObject.init();
           while (window.Running)
           {
              window.Clear(Mathf::Vector4f(255, 255, 255, 255));
-             simpleObject.draw();
+             simpleObject.draw(simpleObject.texture());
              window.Display();
           }
           window.DestroyWindow();
