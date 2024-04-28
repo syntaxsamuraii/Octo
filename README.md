@@ -55,5 +55,6 @@ ans - Its very easy to use and powerful enough to make your games with.
   Object type need to take one of these or it will automatically set as a sprite
   Sprite has transform property ```simpleObject.transfrom.``` it will show all the properties that can be changed.
   Sprites color can be changed by ```simpleObject.color(0, 255, 0, 255);``` or ```simpleObject.color(Mathf::Vector4f(0, 255, 0, 255));```
-  
+
+Made with GLFW, GLAD, STBI
 #Currently development
