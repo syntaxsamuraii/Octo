@@ -1,5 +1,5 @@
 # Octo
-A easy to use c++17 opengl based game framework at puts sfml and others to shame.
+A easy to use c++14 opengl based game framework at puts sfml and others to shame.
 
 * Why use Octo?
 ans - Its very easy to use and powerful enough to make your games with.
