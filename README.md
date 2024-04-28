@@ -38,8 +38,9 @@ ans - Its very easy to use and powerful enough to make your games with.
        int main()
        {
           window.CreateWindow("My first window", 500, 600);
-          simpleObject.type = Octo::Sprite;
+          simpleObject.type = Octo::SPRITE;
           simpleObject.loadfrompath("Player.png");
+          //simpleObject.init(); this is not needed here as its a sprite and loadfrompath() does that for you
           while (window.Running)
           {
              window.Clear(Mathf::Vector4f(255, 255, 255, 255));
@@ -49,5 +50,10 @@ ans - Its very easy to use and powerful enough to make your games with.
           Octo::DestroyWindow(window);
       }
    ```
-
-#Currently UnderDev
+* Properties in Object
+  Object contains enum consisting of ```AUDIO, SPRITE, PARTICLE, TEXT, BUTTON```.
+  Object type need to take one of these or it will automatically set as a sprite
+  Sprite has transform property ```simpleObject.transfrom.``` it will show all the properties that can be changed.
+  Sprites color can be changed by ```simpleObject.color(0, 255, 0, 255);``` or ```simpleObject.color(Mathf::Vector4f(0, 255, 0, 255));```
+  
+#Currently development
