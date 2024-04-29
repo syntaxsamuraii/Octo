@@ -7,7 +7,7 @@ ans - Its very easy to use and powerful enough to make your games with.
 # Features
   * Textures and sprites
   * Build-in math library
-  * Audio
+  * Camera
   * UI Text
   * Input System
 
