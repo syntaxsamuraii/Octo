@@ -5,13 +5,10 @@ A easy to use c++14 opengl based game framework at puts sfml and others to shame
 ans - Its very easy to use and powerful enough to make your games with.
 
 # Features
-  * In Build particle system
   * Textures and sprites
   * Build-in math library
-  * Prewritten imgui setup(If you wanted to make a game engine on top the framework)
   * Audio
-  * Build-in AI generator
-  * UI (Text, Button)
+  * UI Text
   * Input System
 
 # Getting started
