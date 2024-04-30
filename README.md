@@ -19,7 +19,7 @@ ans - Its very easy to use and powerful enough to make your games with.
     int main()
     {
       window.CreateWindow("My first window", 500, 600);
-      while (!window.Running)
+      while (!window.Running())
       {
            window.Clear(255, 255, 255, 255);
            window.Display();
@@ -37,7 +37,7 @@ ans - Its very easy to use and powerful enough to make your games with.
           window.CreateWindow("My first window", 500, 600);
           simpleObject.type = Octo::SPRITE;
           simpleObject.init();
-          while (!window.Running)
+          while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
              simpleObject.draw(simpleObject.loadfrompath("player.png"));
@@ -46,7 +46,7 @@ ans - Its very easy to use and powerful enough to make your games with.
           window.DestroyWindow();
       }
    ```
-    * Key Input Object
+   * Key Input Object
    ```cpp
        #include "Octo.h"
        Octo::Window window;
@@ -56,7 +56,7 @@ ans - Its very easy to use and powerful enough to make your games with.
           window.CreateWindow("My first window", 500, 600);
           simpleObject.type = Octo::SPRITE;
           simpleObject.init();
-          while (window.Running)
+          while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
              if (Octo::IsKeyPressed(Octo::OctoKey_A))
