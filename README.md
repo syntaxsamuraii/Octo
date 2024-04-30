@@ -34,7 +34,7 @@ ans - Its very easy to use and powerful enough to make your games with.
        Octo::GameObject simpleObject;
        int main()
        {
-          window.CreateWindow("My first window", 500, 600);
+          window.CreateWindow("Object test", 500, 600);
           simpleObject.type = Octo::SPRITE;
           simpleObject.init();
           while (!window.Running())
@@ -46,14 +46,14 @@ ans - Its very easy to use and powerful enough to make your games with.
           window.DestroyWindow();
       }
    ```
-   * Key Input Object
+* Key Input Object
    ```cpp
        #include "Octo.h"
        Octo::Window window;
        Octo::GameObject simpleObject;
        int main()
        {
-          window.CreateWindow("My first window", 500, 600);
+          window.CreateWindow("Input Test", 500, 600);
           simpleObject.type = Octo::SPRITE;
           simpleObject.init();
           while (!window.Running())
@@ -69,11 +69,24 @@ ans - Its very easy to use and powerful enough to make your games with.
           window.DestroyWindow();
       }
    ```
-* Properties in Object
-  Object contains enum consisting of ```AUDIO, SPRITE, PARTICLE, TEXT, BUTTON```.
-  Object type need to take one of these or it will automatically set as a sprite
-  Sprite has transform property ```simpleObject.transfrom.``` it will show all the properties that can be changed.
-  Sprites color can be changed by ```simpleObject.color(0, 255, 0, 255);``` or ```simpleObject.color(Mathf::Vector4f(0, 255, 0, 255));```
+ * Key Input Object
+   ```cpp
+       #include "Octo.h"
+       Octo::Window window;
+       Octo::Audio simpleAudio;
+       int main()
+       {
+          window.CreateWindow("Audio Test", 500, 600);
+          simpleAudio.init();
+          while (!window.Running())
+          {
+             window.Clear(255, 255, 255, 255);
+             simpleAudio.play(simpleAudio.loadfrompath("music.wav"));
+             window.Display();
+          }
+          window.DestroyWindow();
+      }
+   ```
 
 Made with GLFW, GLAD, STBI
 #Currently development
