@@ -32,7 +32,7 @@ ans - Its very easy to use and powerful enough to make your games with.
     Octo::Window window;
     int main()
     {
-      window.Create("My first window", 500, 600);
+      window.Create("My first window", 500, 600, false);
       while (!window.Running())
       {
            window.Clear(255, 255, 255, 255);
@@ -48,7 +48,7 @@ ans - Its very easy to use and powerful enough to make your games with.
        Octo::GameObject simpleObject;
        int main()
        {
-          window.Create("Object test", 500, 600);
+          window.Create("Object test", 500, 600, false);
           simpleObject.init();
           while (!window.Running())
           {
@@ -67,7 +67,7 @@ ans - Its very easy to use and powerful enough to make your games with.
        Octo::GameObject simpleObject;
        int main()
        {
-          window.Create("Input Test", 500, 600);
+          window.Create("Input Test", 500, 600, false);
           simpleObject.init();
           while (!window.Running())
           {
@@ -95,7 +95,7 @@ ans - Its very easy to use and powerful enough to make your games with.
             
        int main()
        {
-          window.Create("Camera Test", 500, 600);
+          window.Create("Camera Test", 500, 600, false);
 
           while (!window.Running())
           {
@@ -128,7 +128,7 @@ ans - Its very easy to use and powerful enough to make your games with.
        Octo::Audio simpleAudio;
        int main()
        {
-          window.Create("Audio Test", 500, 600);
+          window.Create("Audio Test", 500, 600, false);
           simpleAudio.Init();
           while (!window.Running())
           {
