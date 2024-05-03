@@ -57,6 +57,7 @@ ans - Its very easy to use and powerful enough to make your games with.
              simpleObject.draw(simpleObject.loadfrompath("player.png"));
              window.Display();
           }
+          simpleObject.DestroyShaders();
           window.DestroyWindow();
       }
    ```
@@ -80,6 +81,7 @@ ans - Its very easy to use and powerful enough to make your games with.
              simpleObject.draw(simpleObject.loadfrompath("player.png"));
              window.Display();
           }
+          simpleObject.DestroyShaders();
           window.DestroyWindow();
       }
    ```
