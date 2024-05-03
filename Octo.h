@@ -15,8 +15,8 @@ namespace Octo
 		_declspec(dllimport) void SetWindowSize(int width, int height);
 		_declspec(dllimport) void SetCameraZoom(float _zoom);
 		_declspec(dllimport) void SetCameraPosition(float _x, float _y);
-        _declspec(dllimport) void MoveCamera(float _x, float _y);
-        _declspec(dllimport) void Zoom(float _zoom);
+        	_declspec(dllimport) void MoveCamera(float _x, float _y);
+        	_declspec(dllimport) void Zoom(float _zoom);
 
 	private:
 		float zoom = -95.0f;
@@ -49,8 +49,6 @@ namespace Octo
 		_declspec(dllimport) float GetScale_Y();
 		_declspec(dllimport) float GetRotation();
 		_declspec(dllimport) float GetZValue();
-
-		_declspec(dllimport) void DestroyShaders();
 
 		_declspec(dllimport) unsigned int loadfrompath(const std::string& path);
 		_declspec(dllimport) void Init();
