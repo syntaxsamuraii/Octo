@@ -102,7 +102,6 @@ ans - Its very easy to use and powerful enough to make your games with.
              {
                 window.MoveCamera(0, -1);
              }
-             simpleObject.draw(simpleObject.loadfrompath("player.png"));
              window.Display();
           }
           window.DestroyWindow();
