@@ -85,8 +85,8 @@ ans - Its very easy to use and powerful enough to make your games with.
           window.DestroyWindow();
       }
    ```
-* Camer Example
-  - Camera is inside the window.
+* Camera Example
+  - Camera is inside the ```Octo::Window```.
   - ```Window.SetCameraZoom(zoom);``` in here zoom is a float
   - ```Window.SetCameraPosition(posX, posY);``` in here posX and posY are float
   - ```Window.MoveCamera(posX, posY);``` in here posX and posY are float
