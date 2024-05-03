@@ -18,10 +18,14 @@ ans - Its very easy to use and powerful enough to make your games with.
 # Upcoming Features
   * More Image file formats
   * Post Processing
-
-
+  * UI
 
 # Getting started
+  * How to setup the visual studio project with Octo
+     - Include the Octo.lib in the library directory
+     - In linker input add Octo.lib
+     - Add Octo.dll to source directory
+     - Add both ```Mathf.h``` and ```Octo.h``` to your project and include them. 
   * Basic Window Example
     ```cpp
     #include "Octo.h"
