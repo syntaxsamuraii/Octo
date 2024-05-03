@@ -49,7 +49,6 @@ ans - Its very easy to use and powerful enough to make your games with.
        int main()
        {
           window.Create("Object test", 500, 600);
-          simpleObject.type = Octo::SPRITE;
           simpleObject.init();
           while (!window.Running())
           {
@@ -69,7 +68,6 @@ ans - Its very easy to use and powerful enough to make your games with.
        int main()
        {
           window.Create("Input Test", 500, 600);
-          simpleObject.type = Octo::SPRITE;
           simpleObject.init();
           while (!window.Running())
           {
