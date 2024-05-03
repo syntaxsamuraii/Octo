@@ -3,7 +3,7 @@
 ![OctoLogo](https://github.com/syntaxsamuraii/Octo/assets/115278697/21f07170-7c63-4610-a7ed-cb9e28db52f9)
 
 
-A easy to use Windows only, c++14 opengl based game framework that puts sfml and others to shame. 
+A easy to use c++14 opengl based game framework for windows that puts sfml and others to shame. 
 
 * Why use Octo?
 ans - Its very easy to use and powerful enough to make your games with.
