@@ -15,6 +15,12 @@ ans - Its very easy to use and powerful enough to make your games with.
   * Audio
   * Input System
 
+# Upcoming Features
+  * More Image file formats
+  * Post Processing
+
+
+
 # Getting started
   * Basic Window Example
     ```cpp
