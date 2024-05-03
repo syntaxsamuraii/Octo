@@ -108,7 +108,6 @@ namespace Octo
         OCTO_NUM_8,
         OCTO_NUM_9,
 
-        // Special character keys
         OCTO_ESCAPE,
         OCTO_ENTER,
         OCTO_TAB,
@@ -151,6 +150,5 @@ namespace Octo
 
     _declspec(dllimport) bool IsKeyPressed(OctoKey key);
     _declspec(dllimport) bool IsKeyReleased(OctoKey key);
-
 
 }
