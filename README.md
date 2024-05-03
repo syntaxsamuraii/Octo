@@ -45,7 +45,7 @@ ans - Its very easy to use and powerful enough to make your games with.
    ```cpp
        #include "Octo.h"
        Octo::Window window;
-       Octo::GameObject simpleObject;
+       Octo::Sprite simpleObject;
        int main()
        {
           window.Create("Object test", 500, 600, false);
@@ -64,7 +64,7 @@ ans - Its very easy to use and powerful enough to make your games with.
    ```cpp
        #include "Octo.h"
        Octo::Window window;
-       Octo::GameObject simpleObject;
+       Octo::Sprite simpleObject;
        int main()
        {
           window.Create("Input Test", 500, 600, false);
