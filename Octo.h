@@ -50,6 +50,8 @@ namespace Octo
 		_declspec(dllimport) float GetRotation();
 		_declspec(dllimport) float GetZValue();
 
+		_declspec(dllimport) void DestroyShaders();
+
 		_declspec(dllimport) unsigned int loadfrompath(const std::string& path);
 		_declspec(dllimport) void Init();
 		_declspec(dllimport) void Draw(unsigned int texture);
