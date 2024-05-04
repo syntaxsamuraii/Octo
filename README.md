@@ -43,22 +43,22 @@ ans - Its very easy to use and powerful enough to make your games with.
     ```
  * Adding an Object Example
    ```cpp
-       #include "Octo.h"
-       Octo::Window window;
-       Octo::Sprite simpleObject;
-       int main()
-       {
-          window.Create("Object test", 500, 600, false);
-          simpleObject.init();
-          while (!window.Running())
-          {
-             window.Clear(255, 255, 255, 255);
-             simpleObject.draw(simpleObject.loadfrompath("player.png"));
-             window.Display();
-          }
-          simpleObject.DestroyShaders();
-          window.DestroyWindow();
-      }
+      #include "Octo.h"
+      Octo::Window window;
+      Octo::Sprite simpleObject;
+     int main()
+     {
+         window.Create("Object test", 500, 600, false);
+         simpleObject.Init();
+         while (!window.Running())
+         {
+              window.Clear(255, 255, 255, 255);
+              simpleObject.Draw(simpleObject.loadfrompath("player.png"));
+              window.Display();
+         }
+         simpleObject.DestroyShaders();
+         window.DestroyWindow();
+   }
    ```
 * Key Input Example
    ```cpp
@@ -68,15 +68,15 @@ ans - Its very easy to use and powerful enough to make your games with.
        int main()
        {
           window.Create("Input Test", 500, 600, false);
-          simpleObject.init();
+          simpleObject.Init();
           while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
-             if (Octo::IsKeyPressed(Octo::OctoKey_A))
+             if (Octo::IsKeyPressed(Octo::OCTO_A))
              {
                 simpleObject.Move(-1, 0);
              }
-             simpleObject.draw(simpleObject.loadfrompath("player.png"));
+             simpleObject.Draw(simpleObject.loadfrompath("player.png"));
              window.Display();
           }
           simpleObject.DestroyShaders();
@@ -100,19 +100,19 @@ ans - Its very easy to use and powerful enough to make your games with.
           while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
-             if (Octo::IsKeyPressed(Octo::OctoKey_A))
+             if (Octo::IsKeyPressed(Octo::OCTO_A))
              {
                 window.MoveCamera(-1, 0);
              }
-             if (Octo::IsKeyPressed(Octo::OctoKey_D))
+             if (Octo::IsKeyPressed(Octo::OCTO_D))
              {
                 window.MoveCamera(1, 0);
              }
-             if (Octo::IsKeyPressed(Octo::OctoKey_W))
+             if (Octo::IsKeyPressed(Octo::OCTO_W))
              {
                 window.MoveCamera(0, 1);
              }
-             if (Octo::IsKeyPressed(Octo::OctoKey_S))
+             if (Octo::IsKeyPressed(Octo::OCTO_S))
              {
                 window.MoveCamera(0, -1);
              }
@@ -129,11 +129,12 @@ ans - Its very easy to use and powerful enough to make your games with.
        int main()
        {
           window.Create("Audio Test", 500, 600, false);
-          simpleAudio.Init();
+          simpleAudio.Init(simpleAudio.loadfrompath("music.wav"));
           while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
-             simpleAudio.Play(simpleAudio.loadfrompath("music.wav")); //Audio Types supported are wav, mp3 and flac
+             simpleAudio.Play(); //Audio Types supported are wav, mp3 and flac
+             //simpleAudio.Stop();
              window.Display();
           }
           window.DestroyWindow();
