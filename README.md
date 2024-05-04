@@ -22,10 +22,12 @@ ans - Its very easy to use and powerful enough to make your games with.
 
 # Getting started
   * How to setup the visual studio project with Octo
+     - All configurations
      - Include the Octo.lib in the library directory
      - In linker input add Octo.lib
      - Add Octo.dll to source directory
-     - Add both ```Mathf.h``` and ```Octo.h``` to your project and include them. 
+     - Add both ```Mathf.h``` and ```Octo.h``` to your project and include them.
+     - Set Debug to release
   * Basic Window Example
     ```cpp
     #include "Octo.h"
@@ -139,6 +141,29 @@ ans - Its very easy to use and powerful enough to make your games with.
           }
           window.DestroyWindow();
       }
+   ```
+    * Timer example
+   ```cpp
+      #include "Octo.h"
+      Octo::Window window;
+      Octo::Sprite simpleObject;
+     int main()
+     {
+         window.Create("Timer test", 500, 600, false);
+         simpleObject.Init();
+         while (!window.Running())
+         {
+              window.Clear(255, 255, 255, 255);
+              if (Octo::Timer(2))
+              {
+                 simpleObject.Move(1, 0);
+              }
+              simpleObject.Draw(simpleObject.loadfrompath("player.png"));
+              window.Display();
+         }
+         simpleObject.DestroyShaders();
+         window.DestroyWindow();
+   }
    ```
 * Understanding Octo Error Codes
   - Every error with ```U``` is based for Audio.
