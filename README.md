@@ -51,11 +51,11 @@ ans - Its very easy to use and powerful enough to make your games with.
      int main()
      {
          window.Create("Object test", 500, 600, false);
-         simpleObject.Init();
+         simpleObject.Init(simpleObject.loadfrompath("player.png"));
          while (!window.Running())
          {
               window.Clear(255, 255, 255, 255);
-              simpleObject.Draw(simpleObject.loadfrompath("player.png"));
+              simpleObject.Draw();
               window.Display();
          }
          simpleObject.DestroyShaders();
@@ -70,7 +70,7 @@ ans - Its very easy to use and powerful enough to make your games with.
        int main()
        {
           window.Create("Input Test", 500, 600, false);
-          simpleObject.Init();
+          simpleObject.Init(simpleObject.loadfrompath("player.png"));
           while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
@@ -78,7 +78,7 @@ ans - Its very easy to use and powerful enough to make your games with.
              {
                 simpleObject.Move(-1, 0);
              }
-             simpleObject.Draw(simpleObject.loadfrompath("player.png"));
+             simpleObject.Draw();
              window.Display();
           }
           simpleObject.DestroyShaders();
