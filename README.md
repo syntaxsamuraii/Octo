@@ -236,5 +236,6 @@ int main() {
   - ```O877``` error means your path of the texture does not exist(Texture type supported is only PNG for now).
 
 
-Made with GLFW, GLAD, STBI, MiniAudios
+Made with GLFW, GLAD, STBI, MiniAudios, ImGui
 #Currently development
+(Source code available from Beta version)
