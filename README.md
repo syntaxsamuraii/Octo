@@ -18,6 +18,7 @@ ans - Its very easy to use and powerful enough to make your games with.
 # Upcoming Features
   * More Image file formats
   * Post Processing
+  * Particles
   * UI
 
 # Getting started
