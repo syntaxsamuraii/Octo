@@ -14,6 +14,7 @@ ans - Its very easy to use and powerful enough to make your games with.
   * Camera
   * Audio
   * Input System
+  * ImGui Support
 
 # Upcoming Features
   * More Image file formats
@@ -36,7 +37,7 @@ ans - Its very easy to use and powerful enough to make your games with.
     Octo::Window window;
     int main()
     {
-      window.Create("My first window", 500, 600, false);
+      window.Create("My first window", 500, 600, false, false, false);
       while (!window.Running())
       {
            window.Clear(255, 255, 255, 255);
@@ -52,7 +53,7 @@ ans - Its very easy to use and powerful enough to make your games with.
       Octo::Sprite simpleObject;
      int main()
      {
-         window.Create("Object test", 500, 600, false);
+         window.Create("Object test", 500, 600, false, false, false);
          simpleObject.Init(simpleObject.loadfrompath("player.png"));
          while (!window.Running())
          {
@@ -71,14 +72,14 @@ ans - Its very easy to use and powerful enough to make your games with.
        Octo::Sprite simpleObject;
        int main()
        {
-          window.Create("Input Test", 500, 600, false);
+          window.Create("Input Test", 500, 600, false, false, false);
           simpleObject.Init(simpleObject.loadfrompath("player.png"));
           while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
              if (Octo::IsKeyPressed(Octo::OCTO_A))
              {
-                simpleObject.Move(-1, 0);
+                simpleObject.Move(-0.01, 0);
              }
              simpleObject.Draw();
              window.Display();
@@ -99,7 +100,7 @@ ans - Its very easy to use and powerful enough to make your games with.
             
        int main()
        {
-          window.Create("Camera Test", 500, 600, false);
+          window.Create("Camera Test", 500, 600, false, false, false);
 
           while (!window.Running())
           {
@@ -132,8 +133,8 @@ ans - Its very easy to use and powerful enough to make your games with.
        Octo::Audio simpleAudio;
        int main()
        {
-          window.Create("Audio Test", 500, 600, false);
-          simpleAudio.Init(simpleAudio.loadfrompath("music.wav"));
+          window.Create("Audio Test", 500, 600, false, false, false);
+          simpleAudio.Init(simpleAudio.loadfromfile("music.wav"));
           while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
@@ -151,8 +152,8 @@ ans - Its very easy to use and powerful enough to make your games with.
       Octo::Sprite simpleObject;
      int main()
      {
-         window.Create("Timer test", 500, 600, false);
-         simpleObject.Init();
+         window.Create("Timer test", 500, 600, false, false, false);
+         simpleObject.Init(simpleObject.loadfrompath("player.png"));
          while (!window.Running())
          {
               window.Clear(255, 255, 255, 255);
@@ -160,13 +161,70 @@ ans - Its very easy to use and powerful enough to make your games with.
               {
                  simpleObject.Move(1, 0);
               }
-              simpleObject.Draw(simpleObject.loadfrompath("player.png"));
+              simpleObject.Draw();
               window.Display();
          }
          simpleObject.DestroyShaders();
          window.DestroyWindow();
    }
    ```
+   * ImGui example
+```cpp
+#include "Octo.h"
+#include <iostream>
+
+Octo::Window window;
+
+float slider_f = 0;
+float input_f = 0;
+float drag_f = 0;
+
+int slider_i = 0;
+int input_i = 0;
+int drag_i = 0;
+
+std::string input_s = "Octo is the best!";
+
+int main() {
+    window.Create("Imgui Test", 500, 700, false, false, false);
+    Octo::Imgui::Start();
+    while (!window.Running()) {
+        window.Clear(0, 0, 0, 255);
+        Octo::Imgui::Update();
+        //ImGui code here
+        if (Octo::Imgui::Begin("Octo window"))
+        {
+            Octo::Imgui::InputText("Input String", &input_s);
+
+            if (Octo::Imgui::Button("Press me!"))
+            {
+                std::cout << "Pressed" << std::endl;
+            }
+            if (Octo::Imgui::CollapsingHeader("Floats"))
+            {
+                Octo::Imgui::SliderFloat("Slider float", &slider_f, -10, 10);
+                Octo::Imgui::DragFloat("Drag float", &drag_f);
+                Octo::Imgui::InputFloat("Input float", &input_f);
+            }
+            if (Octo::Imgui::CollapsingHeader("Integers"))
+            {
+                Octo::Imgui::SliderInt("Slider Int", &slider_i, -10, 10);
+                Octo::Imgui::DragInt("Drag Int", &drag_i);
+                Octo::Imgui::InputInt("Input Int", &input_i);
+            }
+            Octo::Imgui::End();
+        }
+        Octo::Imgui::Render();
+        window.Display();
+    }
+
+    Octo::Imgui::Shutdown();
+    window.DestroyWindow();
+
+    return 0;
+}
+```
+
 * Understanding Octo Error Codes
   - Every error with ```U``` is based for Audio.
   - ```U786``` error means Audio engine is not initialized main cause is you forgot to put the ```audio.Init();``` function.
