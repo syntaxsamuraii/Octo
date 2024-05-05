@@ -31,6 +31,7 @@ ans - Its very easy to use and powerful enough to make your games with.
      - Add Octo.dll to source directory
      - Add both ```Mathf.h``` and ```Octo.h``` to your project and include them.
      - Set Debug to release
+     - Set to x64
   * Basic Window Example
     ```cpp
     #include "Octo.h"
