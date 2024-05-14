@@ -236,6 +236,7 @@ int main() {
   - Every error with ```O``` is based for GameObject
   - ```O877``` error means your path of the texture does not exist(Texture type supported is only PNG for now).
 
+if you have any questions you can join our discord server to ask questions - https://discord.gg/nhgYz8HJ
 
 Made with GLFW, GLAD, STBI, MiniAudios, ImGui
 #Currently development
