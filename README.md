@@ -56,6 +56,8 @@ ans - Its very easy to use and powerful enough to make your games with.
      {
          window.Create("Object test", 500, 600, false, false, false);
          simpleObject.Init(simpleObject.loadfrompath("player.png"));
+         simpleObject.SetPosition(0, 0);
+
          while (!window.Running())
          {
               window.Clear(255, 255, 255, 255);
@@ -75,6 +77,8 @@ ans - Its very easy to use and powerful enough to make your games with.
        {
           window.Create("Input Test", 500, 600, false, false, false);
           simpleObject.Init(simpleObject.loadfrompath("player.png"));
+          simpleObject.SetPosition(0, 0);
+
           while (!window.Running())
           {
              window.Clear(255, 255, 255, 255);
@@ -155,6 +159,8 @@ ans - Its very easy to use and powerful enough to make your games with.
      {
          window.Create("Timer test", 500, 600, false, false, false);
          simpleObject.Init(simpleObject.loadfrompath("player.png"));
+         simpleObject.SetPosition(0, 0);
+
          while (!window.Running())
          {
               window.Clear(255, 255, 255, 255);
